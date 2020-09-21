@@ -9,6 +9,7 @@ const tasksReducer = (state = [], action) => {
   switch (action.type) {
     // switch case for `createTask` action
     case CREATE_TASK:
+      debugger;
       const newTask = {
         message: action.taskMessage,
       };
@@ -48,3 +49,10 @@ const resetTaskList = () => {
     emptyTaskList: [],
   };
 };
+
+module.exports = {
+  store,
+  createTask,
+  deleteTask,
+  resetTaskList,
+}
